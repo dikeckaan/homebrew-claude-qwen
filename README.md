@@ -1,9 +1,10 @@
-# dikeckaan/tap
+# Homebrew tap for claude-qwen
 
-```bash
-brew install dikeckaan/tap/claude-qwen
+```sh
+brew tap dikeckaan/claude-qwen
+brew install dikeckaan/claude-qwen/claude-qwen
 ```
 
-| Formül | Açıklama |
-|---|---|
-| [claude-qwen](https://github.com/dikeckaan/claude-qwen) | Claude Code'u yerel Qwen3.8-27B (veya herhangi bir GGUF) modeliyle çalıştırır |
+Apple Silicon (arm64), macOS. Installs `llama.cpp` as a dependency. [Claude Code](https://code.claude.com) must be installed separately (`brew install --cask claude-code`).
+
+Source and docs: https://github.com/dikeckaan/claude-qwen
