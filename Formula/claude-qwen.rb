@@ -16,20 +16,20 @@ class ClaudeQwen < Formula
 
   def caveats
     <<~EOS
-      Claude Code gerekli: https://code.claude.com  (brew install --cask claude-code)
+      Claude Code is required: https://code.claude.com  (brew install --cask claude-code)
 
-      Model indir ve başlat:
+      Download a model and start:
         claude-qwen download unsloth/Qwen3.8-27B-GGUF
         claude-qwen
 
-      Modeller ve loglar ~/.claude-qwen altında tutulur (CLAUDE_QWEN_HOME ile değişir).
-      MTP hızlandırması için GPU bellek izni: claude-qwen setup
+      Models and logs live in ~/.claude-qwen (override with CLAUDE_QWEN_HOME).
+      For MTP speed-up, allow raising the GPU memory limit: claude-qwen setup
     EOS
   end
 
   test do
     ENV["CLAUDE_QWEN_HOME"] = testpath
     assert_match version.to_s, shell_output("#{bin}/claude-qwen version")
-    assert_match "Hiç model yok", shell_output("#{bin}/claude-qwen 2>&1", 1)
+    assert_match "No models found", shell_output("#{bin}/claude-qwen 2>&1", 1)
   end
 end
