@@ -11,7 +11,7 @@ class ClaudeQwen < Formula
 
   def install
     bin.install "claude-qwen"
-    (share/"claude-qwen").install "chat_template.jinja"
+    pkgshare.install "chat_template.jinja"
   end
 
   def caveats
