@@ -1,8 +1,8 @@
 class ClaudeQwen < Formula
   desc "Run Claude Code against a local GGUF model (Qwen3.8-27B) via llama.cpp"
   homepage "https://github.com/dikeckaan/claude-qwen"
-  url "https://github.com/dikeckaan/claude-qwen/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "e2e3f635789676c7b4923fbac785108da41eb7ae0f5c1a653298698839b65b01"
+  url "https://github.com/dikeckaan/claude-qwen/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "5343e315d3f9bac0a8b2ff2992a677a11c892df55cda4dba93847b49c8b27c8a"
   license "MIT"
 
   depends_on arch: :arm64
